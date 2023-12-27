@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_local_notification_practise/local_notifications.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -19,9 +20,16 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            
-            ElevatedButton(
-                onPressed: () {}, child: const Icon(Icons.notifications_outlined))
+            ElevatedButton.icon(
+              onPressed: () {
+                LocalNotifications.showSimpleNotification(
+                    title: 'Simple Notification title',
+                    body: 'Notification body',
+                    payload: "This is simple payload");
+              },
+              icon: const Icon(Icons.notifications_outlined),
+              label: const Text('Simple Notification'),
+            )
           ],
         ),
       ),

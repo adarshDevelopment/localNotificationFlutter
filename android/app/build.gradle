@@ -24,14 +24,15 @@ if (flutterVersionName == null) {
 
 android {
     namespace 'com.example.flutter_local_notification_practise'
-    compileSdkVersion flutter.compileSdkVersion
+    // compileSdkVersion flutter.compileSdkVersion
+    compileSdkVersion 33
     ndkVersion flutter.ndkVersion
     defaultConfig {
         multiDexEnabled true
     }
 
     compileOptions {
-        // coreLibraryDesugaringEnabled true    //changed here
+        // coreLibraryDesugaringEnabled true
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
@@ -49,8 +50,10 @@ android {
         applicationId 'com.example.flutter_local_notification_practise'
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
-        minSdkVersion flutter.minSdkVersion
-        targetSdkVersion flutter.targetSdkVersion
+        // minSdkVersion flutter.minSdkVersion
+        minSdkVersion 21
+        // targetSdkVersion flutter.targetSdkVersion
+        targetSdkVersion 33
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
