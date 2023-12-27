@@ -26,12 +26,12 @@ android {
     namespace 'com.example.flutter_local_notification_practise'
     compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
-    // defaultConfig {
-    //     multiDexEnabled true
-    // }
+    defaultConfig {
+        multiDexEnabled true
+    }
 
     compileOptions {
-        // coreLibraryDesugaringEnabled true
+        // coreLibraryDesugaringEnabled true    //changed here
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
